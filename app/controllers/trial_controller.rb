@@ -26,6 +26,6 @@ class TrialController < ApplicationController
       @success2=true
      #Got second only
     end
-  current_user.post(@friend1,@friend2,@success1,@success2)
+  #current_user.post(@friend1,@friend2,@success1,@success2)
   end
 end
