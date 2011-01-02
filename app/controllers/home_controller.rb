@@ -8,7 +8,7 @@ class HomeController < ApplicationController
         @friend1 = current_user.randomFriend()
         begin
         @friend2 = current_user.randomFriend()
-        end while @friend2 != @friend1
+        end while @friend2 == @friend1
         trial=Trial.new(:friend1_id=> @friend1.id,:friend2_id => @friend2.id,:facebook_id => current_user.id)
         trial.save()
         session[:trial_id] = trial.id
