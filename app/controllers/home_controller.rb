@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   def index()
     if current_user == nil
-      redirect_to '/facebook/login'
+      render 'login'
    else
       @friends= current_user.facebook_friends.count
       if @friends >= 2 then
@@ -15,5 +15,7 @@ class HomeController < ApplicationController
         @chars = trial.chars()
       end
     end
+  end
+  def login()
   end
 end
