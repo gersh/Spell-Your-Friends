@@ -10,19 +10,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110102054140) do
+ActiveRecord::Schema.define(:version => 20110102055108) do
 
   create_table "facebook_friends", :force => true do |t|
     t.integer  "facebook_id"
     t.string   "friend"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "friend_id",   :limit => 8
+    t.string   "friend_id"
   end
 
   create_table "facebooks", :force => true do |t|
     t.string   "uid"
-    t.integer  "user_id",    :limit => 8
+    t.string   "user_id"
     t.string   "token"
     t.datetime "created_at"
     t.datetime "updated_at"
