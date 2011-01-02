@@ -1,0 +1,5 @@
+<%= @chars %> de-scrambles to:<br/><br/>
+<% if @success1 %>You have successfully spelled <% else %>You failed to spell <% end %><a href="http://graph.facebook.com/<%=@friend1.friend_id%>"><%= @friend1.friend %></a><br/>
+<% if @success2 %>You have successfully spelled <% else %>You failed to spell <% end %><a href="http://graph.facebook.com/<%= @friend2.friend_id %>"><%= @friend2.friend %></a><br/><br/>
+
+Results have been posted to your respective friends's walls

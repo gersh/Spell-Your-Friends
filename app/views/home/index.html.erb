@@ -1,0 +1,16 @@
+<% if @friends < 2 %>
+Not enough friends 
+<% else %>
+Letters from two of your friends's names are scrambled re-arrange them to spell your friends's names:
+<%= @chars %>
+
+
+<%= form_tag :controller => "trial", :action => "create" do %>
+
+Friend 1: <input type="text" name="friend1"/><br/>
+Friend 2: <input type="text" name="friend2"/><br/>
+
+Click submit to check your results and tell your friends.<br/>
+<input type="submit" value="Check Results"/>
+<% end %>
+<% end %>
