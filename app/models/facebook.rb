@@ -2,7 +2,7 @@ class Facebook < ActiveRecord::Base
   has_many :facebook_friends
 
   def self.createFacebook(code)
-    oauth = Koala::Facebook::OAuth.new('119452241458412','2437e9d4a28701c924cb9dd6ccaa21b3','http://localhost:3000/facebook/create');
+    oauth = Koala::Facebook::OAuth.new('119452241458412','2437e9d4a28701c924cb9dd6ccaa21b3','http://www.spellyourfriends.com/facebook/create');
     token = oauth.get_access_token_info(code)
     graph = Koala::Facebook::GraphAPI.new(token['access_token'])
     profile = graph.get_object("me")
