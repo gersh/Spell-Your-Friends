@@ -23,7 +23,7 @@ class Facebook < ActiveRecord::Base
   def post(friend1, friend2, success1, success2)
     graph = Koala::Facebook::GraphAPI.new(self.token)
     graph.put_wall_post(friend1,wallMsg("",friend1.friend,success1))
-    graph.put_wall_post(friend2,wallMsg("",friend2.friend2,success2))
+    graph.put_wall_post(friend2,wallMsg("",friend2.friend,success2))
 
   end
     private
