@@ -5,13 +5,11 @@ class Trial < ActiveRecord::Base
 
 
   def chars()
-    (self.friend1.friend + self.friend2.friend).downcase().scan(/[a-z]/).join().split(//).sort().join()
+    (self.friend1.friend).downcase().scan(/[a-z]/).join().split(//).sort().join()
   end
   def check(str)
     if clean(self.friend1.friend)==clean(str) then
       1
-    elsif clean(self.friend2.friend)==clean(str) then
-      2
     else
       0
     end
